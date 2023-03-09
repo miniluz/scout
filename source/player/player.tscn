@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://bato8gwm2b5dm"]
+
+[ext_resource type="PackedScene" uid="uid://bablagkdd5ujb" path="res://assets/player/ship-wireframe.glb" id="2_3wthw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hrxs3"]
+radius = 0.332219
+height = 1.17919
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cq4dd"]
+size = Vector3(2.2344, 1, 2.60885)
+
+[node name="Player" type="Node3D"]
+
+[node name="ship-wireframe" parent="." instance=ExtResource("2_3wthw")]
+
+[node name="iFrames" type="Timer" parent="."]
+one_shot = true
+
+[node name="Cooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="Hurtbox" type="Area3D" parent="."]
+
+[node name="HurtboxShape" type="CollisionShape3D" parent="Hurtbox"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0.297407)
+shape = SubResource("CapsuleShape3D_hrxs3")
+
+[node name="ParryHitbox" type="Area3D" parent="."]
+
+[node name="ParryHitboxShape" type="CollisionShape3D" parent="ParryHitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.62539)
+shape = SubResource("BoxShape3D_cq4dd")
+
+[connection signal="timeout" from="iFrames" to="." method="_on_i_frames_timeout"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]

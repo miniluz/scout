@@ -1,0 +1,31 @@
+Restricciones:
+  1. Debe ser 2D
+  2. No debe estar centrado en la historia
+    - Esto implica (?) un focus en el gameplay, souls-like, ETG?
+    - Parries??
+  3. Escala limitada, digamos <= 3 niveles.
+  4. Arte limitado
+    - Wireframe?
+
+Misiones secundarias:
+  1. Música
+    - Dinámica (?)
+  2. Algún tema
+
+Ideas:
+  1. Rogue-like?
+    - Generación de niveles :c
+  2. 
+
+El juego consiste en duelos entre el jugador y un boss.
+El boss tira volleys de balas al jugador que debe parriarlas para pegarle.
+El juegador solo puede realizar un parry con el beat de la música, por lo que debe posicionarse correctamente.
+Si el jugador da el parry en el momento incorrecto del beat, corta las balas en lugar de devolverlas.
+Si el jugador da el parry muy temprano, la bala gana daño reducido.
+El jugador también puede rodar independientemente del ritmo para tener i-frames.
+
+El boss quizá tendrá ataques no parryables
+El boss debe resistir bastantes parries, maybe varias fases
+
+Quizá el jugador debería poder atacar al boss más allá de los parries.
+Wireframes?

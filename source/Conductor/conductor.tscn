@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfypgwnkwufa"]
+
+[ext_resource type="AudioStream" uid="uid://ckc5nubhskqt8" path="res://assets/test.ogg" id="1_oyb2q"]
+[ext_resource type="Script" path="res://source/Conductor/conductor.gd" id="2_dffpj"]
+
+[node name="Conductor" type="AudioStreamPlayer"]
+stream = ExtResource("1_oyb2q")
+volume_db = -10.362
+script = ExtResource("2_dffpj")
+bpm = 73

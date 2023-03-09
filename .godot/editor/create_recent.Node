@@ -1,0 +1,9 @@
+Node3D
+CollisionShape3D
+Area3D
+CollisionPolygon3D
+Timer
+Label
+AudioStreamPlayer
+WorldEnvironment
+MeshInstance3D
