@@ -1,3 +1,4 @@
+MeshInstance3D
 Node3D
 CollisionShape3D
 Area3D
@@ -6,4 +7,3 @@ Timer
 Label
 AudioStreamPlayer
 WorldEnvironment
-MeshInstance3D

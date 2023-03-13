@@ -1,0 +1,156 @@
+{
+  "main": {
+    "id": "a54fd1b819988411",
+    "type": "split",
+    "children": [
+      {
+        "id": "9e784a2b67033463",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "456a4448bda78774",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "Kanban.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d899bbd44a40a4cc",
+    "type": "split",
+    "children": [
+      {
+        "id": "1452f2e67c772b61",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2972217b6d59ef99",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8a338ff57d23fdb9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c5adcd23a4251229",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 226.51103591918945
+  },
+  "right": {
+    "id": "c3a08384b3f5cffe",
+    "type": "split",
+    "children": [
+      {
+        "id": "464914e7e820d6a9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8bf4166f55d19be8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Kanban.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "52535e7897b258ea",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Kanban.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cacc507cbdc35314",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "eae07edbe4124354",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Kanban.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "456a4448bda78774",
+  "lastOpenFiles": [
+    "Screen-Space Triangle Shader.md",
+    "Kanban.md",
+    "Untitled.canvas",
+    "Screen-Space Triangle Shader #Graphics.md",
+    "Untitled.md",
+    "Kanban"
+  ]
+}
