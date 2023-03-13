@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://source/main.gd" id="1_dpqsx"]
 [ext_resource type="PackedScene" uid="uid://bfypgwnkwufa" path="res://source/Conductor/conductor.tscn" id="2_bac53"]
-[ext_resource type="Script" path="res://source/player/player.gd" id="3_yo3o0"]
-[ext_resource type="PackedScene" uid="uid://bato8gwm2b5dm" path="res://source/player/player.tscn" id="4_4w30c"]
+[ext_resource type="PackedScene" uid="uid://c258i6p520iqk" path="res://source/player/player.tscn" id="4_4w30c"]
 [ext_resource type="Script" path="res://source/BeatIndicator.gd" id="4_3555g"]
+[ext_resource type="AudioStream" uid="uid://blotpml0csojj" path="res://assets/test2.ogg" id="5_x8q1g"]
 [ext_resource type="Script" path="res://source/test_enemy.gd" id="6_y7j2w"]
 [ext_resource type="PackedScene" uid="uid://d1joc62i8cpgl" path="res://source/bullets/basic_bullet.tscn" id="7_47nma"]
 
@@ -22,18 +22,19 @@ font_size = 200
 script = ExtResource("1_dpqsx")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 40, 0)
 fov = 30.0
-size = 10.0
+size = 20.0
 
 [node name="Player" parent="." instance=ExtResource("4_4w30c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.04784)
-script = ExtResource("3_yo3o0")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_own5x")
 
 [node name="Conductor" parent="." instance=ExtResource("2_bac53")]
+stream = ExtResource("5_x8q1g")
+bpm = 75
 
 [node name="BeatIndicator" type="Label" parent="."]
 offset_left = 393.0
@@ -52,6 +53,7 @@ one_shot = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.87596)
 script = ExtResource("6_y7j2w")
 bullet_scene = ExtResource("7_47nma")
+enable = true
 
 [connection signal="beat_signal" from="Conductor" to="BeatIndicator" method="_on_conductor_beat_signal"]
 [connection signal="beat_signal" from="Conductor" to="Enemy" method="_on_conductor_beat_signal"]
