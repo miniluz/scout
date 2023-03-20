@@ -1,15 +1,19 @@
 extends Node3D
 
-var target: Vector3
-var speed: float = 1
+var direction: Vector3
+const SPEED: float = 5
+const MAX_DISTANCE: float = 20 **2
 
 # Called when the node enters the scene tree for the first time.
-func initialize(spawn_position, target_position):
+func initialize(spawn_position: Vector3, bullet_direction: Vector3) -> void:
 	position = spawn_position
-	target = target_position
+	direction = bullet_direction
 
 func _physics_process(delta: float):
-	position = position.move_toward(target, speed * delta)
+	translate(direction * SPEED * delta)
+	
+	if position.length_squared() > MAX_DISTANCE:
+		queue_free()
 
 func parry():
 	print("Parried!")

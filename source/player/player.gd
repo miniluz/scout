@@ -11,6 +11,7 @@ var in_cooldown = false
 var parrying = false
 
 var ParryHitbox: Area3D
+var ParryVisualizer: MeshInstance3D
 var Hurtbox: Area3D
 var iFrames: Timer
 var Cooldown: Timer
@@ -21,6 +22,7 @@ func _ready() -> void:
 	Hurtbox = $Hurtbox	
 	iFrames = $iFrames
 	Cooldown = $Cooldown
+	ParryVisualizer = $ParryVisualizer
 
 ### ROLL AND PARRY
 
@@ -42,6 +44,7 @@ func _roll_and_parry(event: InputEvent) -> void:
 
 func set_parrying(parry: bool) -> void:
 	parrying = parry
+	ParryVisualizer.visible = parry
 	if parry:
 		ParryHitbox.parry()
 
@@ -54,9 +57,9 @@ func _input(event: InputEvent) -> void:
 
 ### MOVEMENT
 
-const MAX_SPEED: float = 10
-const ACCELERATION: float = 160
-const FRICTION: float = 160
+const MAX_SPEED: float = 12
+const ACCELERATION: float = 32 * MAX_SPEED
+const FRICTION: float = 32 * MAX_SPEED 
 var velocity: Vector3 = Vector3.ZERO
 
 func _physics_process(delta: float) -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bswqmebicqws2"]
+[gd_scene load_steps=11 format=3 uid="uid://bswqmebicqws2"]
 
 [ext_resource type="Script" path="res://source/main.gd" id="1_dpqsx"]
 [ext_resource type="PackedScene" uid="uid://bfypgwnkwufa" path="res://source/Conductor/conductor.tscn" id="2_bac53"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://blotpml0csojj" path="res://assets/test2.ogg" id="5_x8q1g"]
 [ext_resource type="Script" path="res://source/test_enemy.gd" id="6_y7j2w"]
 [ext_resource type="PackedScene" uid="uid://d1joc62i8cpgl" path="res://source/bullets/basic_bullet.tscn" id="7_47nma"]
+[ext_resource type="PackedScene" uid="uid://ds71nl4ukst11" path="res://source/mothership/mothership.tscn" id="8_3r8yp"]
 
 [sub_resource type="Environment" id="Environment_own5x"]
 glow_enabled = true
@@ -22,12 +23,12 @@ font_size = 200
 script = ExtResource("1_dpqsx")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 40, 0)
+transform = Transform3D(1, 0, 0, 0, 0.506876, 0.862019, 0, -0.862019, 0.506876, 0, 23.5903, 14.2678)
 fov = 30.0
 size = 20.0
 
 [node name="Player" parent="." instance=ExtResource("4_4w30c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.04784)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 3.04784)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_own5x")
@@ -37,6 +38,7 @@ stream = ExtResource("5_x8q1g")
 bpm = 75
 
 [node name="BeatIndicator" type="Label" parent="."]
+visible = false
 offset_left = 393.0
 offset_top = 17.0
 offset_right = 882.0
@@ -50,10 +52,18 @@ wait_time = 0.6
 one_shot = true
 
 [node name="Enemy" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.87596)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4.8)
 script = ExtResource("6_y7j2w")
 bullet_scene = ExtResource("7_47nma")
-enable = true
+
+[node name="Enemy2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4.8)
+script = ExtResource("6_y7j2w")
+bullet_scene = ExtResource("7_47nma")
+
+[node name="Mothership" parent="." instance=ExtResource("8_3r8yp")]
+transform = Transform3D(1, 0, 0, 0, 0.907154, 0.420798, 0, -0.420798, 0.907154, 0, 0, -5.37014)
 
 [connection signal="beat_signal" from="Conductor" to="BeatIndicator" method="_on_conductor_beat_signal"]
 [connection signal="beat_signal" from="Conductor" to="Enemy" method="_on_conductor_beat_signal"]
+[connection signal="beat_signal" from="Conductor" to="Enemy2" method="_on_conductor_beat_signal"]

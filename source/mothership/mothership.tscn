@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds71nl4ukst11"]
+
+[ext_resource type="PackedScene" uid="uid://3mufnk1xajur" path="res://assets/mothership/mothership.glb" id="1_ukabg"]
+[ext_resource type="Material" path="res://assets/player/Material_001.material" id="2_k2h8l"]
+
+[node name="Mothership" instance=ExtResource("1_ukabg")]
+
+[node name="Body" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_k2h8l")
+
+[node name="Wings" parent="." index="1"]
+surface_material_override/0 = ExtResource("2_k2h8l")
+
+[node name="Cannon1" parent="." index="2"]
+surface_material_override/0 = ExtResource("2_k2h8l")
+
+[node name="Cannon2" parent="." index="3"]
+surface_material_override/0 = ExtResource("2_k2h8l")

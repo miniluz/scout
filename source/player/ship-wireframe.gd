@@ -1,4 +1,4 @@
-extends MeshInstance3D
+extends Node3D
 
 const MAX_ROTATION: float = 15. / 180. * PI
 

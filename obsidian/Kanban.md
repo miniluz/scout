@@ -11,6 +11,7 @@ kanban-plugin: basic
 - [ ] Bulletside Parry #Mechanics #Enemy
 - [ ] Enemy Mothership Graphics #Graphics #Enemy
 - [ ] Basic Bullet Shooting Patterns #Mechanics #Enemy
+- [ ] [[Screen-Space Triangle Shader]] #Graphics
 
 
 ## TODO
@@ -21,7 +22,6 @@ kanban-plugin: basic
 
 ## IN-PROGRESS (5)
 
-- [ ] [[Screen-Space Triangle Shader]] #Graphics
 - [ ] Roll #Mechanics #Player
 
 

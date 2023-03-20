@@ -11,9 +11,11 @@
             "id": "456a4448bda78774",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Kanban.md"
+                "file": "Screen-Space Triangle Shader.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kanban.md",
+                "file": "Screen-Space Triangle Shader.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kanban.md",
+                "file": "Screen-Space Triangle Shader.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kanban.md"
+                "file": "Screen-Space Triangle Shader.md"
               }
             }
           }
@@ -146,8 +148,8 @@
   },
   "active": "456a4448bda78774",
   "lastOpenFiles": [
-    "Screen-Space Triangle Shader.md",
     "Kanban.md",
+    "Screen-Space Triangle Shader.md",
     "Untitled.canvas",
     "Screen-Space Triangle Shader #Graphics.md",
     "Untitled.md",
