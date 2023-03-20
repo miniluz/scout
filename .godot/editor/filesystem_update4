@@ -1,6 +1,6 @@
+res://source/player/player.gd
+res://source/player/player.tscn
 res://source/main.tscn
 res://source/bullets/basic_bullet.tscn
-res://source/player/player.tscn
 res://source/mothership/mothership.tscn
-res://source/test_enemy.gd
-res://source/player/player.gd
+res://source/bullets/basic_bullet.gd

@@ -131,13 +131,13 @@ one_shot = true
 [node name="Cooldown" type="Timer" parent="."]
 one_shot = true
 
-[node name="Hurtbox" type="Area3D" parent="." groups=["Hurtbox"]]
+[node name="Hurtbox" type="Area3D" parent="." groups=["PlayerHurtbox"]]
 
 [node name="HurtboxShape" type="CollisionShape3D" parent="Hurtbox"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0.0492183)
 shape = SubResource("CapsuleShape3D_hrxs3")
 
-[node name="ParryHitbox" type="Area3D" parent="." groups=["ParryHitbox"]]
+[node name="ParryHitbox" type="Area3D" parent="." groups=["PlayerParry"]]
 script = ExtResource("3_lp81p")
 
 [node name="ParryHitboxShape" type="CollisionShape3D" parent="ParryHitbox"]
@@ -145,6 +145,7 @@ shape = SubResource("CylinderShape3D_dufft")
 
 [node name="ParryVisualizer" type="MeshInstance3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -1.13044, 0)
+visible = false
 mesh = SubResource("CylinderMesh_6c12c")
 surface_material_override/0 = SubResource("StandardMaterial3D_cgp6s")
 

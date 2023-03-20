@@ -8,11 +8,11 @@ kanban-plugin: basic
 
 - [ ] Parry Animation #Graphics #Player
 - [ ] Roll Animation #Graphics #Player
-- [ ] Grid #Graphics
 - [ ] Parryable Bullet #Mechanics #Graphics #Enemy
+- [ ] Grid #Graphics
+- [ ] Sidebars #Graphics
 - [ ] Enemy Healthbar #UI
 - [ ] Player Healthbar #UI
-- [ ] Sidebars #Graphics
 
 
 ## TODO

@@ -55,11 +55,13 @@ one_shot = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4.8)
 script = ExtResource("6_y7j2w")
 bullet_scene = ExtResource("7_47nma")
+enable = true
 
 [node name="Enemy2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4.8)
 script = ExtResource("6_y7j2w")
 bullet_scene = ExtResource("7_47nma")
+enable = true
 
 [node name="Mothership" parent="." instance=ExtResource("8_3r8yp")]
 transform = Transform3D(1, 0, 0, 0, 0.907154, 0.420798, 0, -0.420798, 0.907154, 0, 0, -5.37014)

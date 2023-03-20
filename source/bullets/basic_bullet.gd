@@ -23,8 +23,8 @@ func hurt():
 	queue_free()
 
 func _on_hitbox_area_entered(area:Area3D):
-	if area.is_in_group("Hurtbox"):
+	if area.is_in_group("PlayerHurtbox") and area.get_parent().vulnerable:
 		hurt()
 
-	if area.is_in_group("ParryHitbox") and area.get_parent().parrying:
+	if area.is_in_group("PlayerParry") and area.get_parent().parrying:
 		parry()
