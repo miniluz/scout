@@ -6,7 +6,7 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_n6ibc"]
 radius = 0.461852
 
-[node name="bullet" type="Node3D"]
+[node name="basic_bullet" type="Node3D"]
 script = ExtResource("1_emf65")
 
 [node name="bullet" parent="." instance=ExtResource("1_uxesr")]

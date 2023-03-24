@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://h8bod7qr2mw0"]
+
+[ext_resource type="PackedScene" uid="uid://dmhl3glht4ohs" path="res://assets/bullets/bullet_tetrahedron.glb" id="1_j8vgn"]
+[ext_resource type="Script" path="res://source/bullets/tracing_bullet.gd" id="1_sirva"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fs16c"]
+radius = 0.461852
+
+[node name="tracing_bullet" type="Node3D"]
+script = ExtResource("1_sirva")
+
+[node name="bullet_tetrahedron" parent="." instance=ExtResource("1_j8vgn")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Hitbox" type="Area3D" parent="."]
+
+[node name="HitboxShape" type="CollisionShape3D" parent="Hitbox"]
+shape = SubResource("SphereShape3D_fs16c")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

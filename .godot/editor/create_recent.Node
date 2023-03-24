@@ -1,7 +1,7 @@
+Area3D
 MeshInstance3D
 Node3D
 CollisionShape3D
-Area3D
 CollisionPolygon3D
 Timer
 Label
