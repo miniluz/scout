@@ -18,17 +18,15 @@ kanban-plugin: basic
 ## TODO
 
 - [ ] Hurt #Mechanics #Player
-- [ ] Straight laser #Mechanics #Graphics #Enemy
 - [ ] Wave laser #Mechanics #Graphics #Enemy
+- [ ] Straight laser #Mechanics #Graphics #Enemy
+- [ ] Attack Pattern System #Mechanics #Enemy
 
 
 ## IN-PROGRESS (5)
 
-- [ ] Roll #Mechanics #Player
 - [ ] Enemy Mothership Model #Graphics #Enemy
 - [ ] [[Screen-Space Triangle Shader]] #Graphics
-- [ ] Tracing Bullet #Mechanics #Graphics #Enemy
-- [ ] Attack Pattern System #Mechanics #Enemy
 
 
 ## DONE
@@ -37,6 +35,9 @@ kanban-plugin: basic
 - [ ] Basic Bullet #Mechanics #Graphics #Enemy
 - [ ] Player Move Animation #Graphics #Player
 - [ ] Conductor #Mechanics #Music
+- [ ] Tracing Bullet #Mechanics #Graphics #Enemy
+- [ ] ETG Roll #Mechanics #Player
+- [ ] Furi Roll #Mechanics #Player
 
 
 ## BLOCKED

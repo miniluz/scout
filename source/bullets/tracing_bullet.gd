@@ -41,7 +41,6 @@ func _physics_process(delta: float):
 			var angle_diff = velocity.angle_to(target_direction)
 
 			if angle_diff <= angular_speed * delta: # If rotation just gets there
-				print("Gets there!")
 				velocity = target_direction
 				total_rotated += angle_diff
 

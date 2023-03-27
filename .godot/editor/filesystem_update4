@@ -1,9 +1,5 @@
+res://source/player/player.gd
 res://source/main.tscn
-res://source/bullets/basic_bullet.tscn
 res://source/player/player.tscn
-res://source/Boss1/mothership.tscn
+res://source/bullets/basic_bullet.tscn
 res://source/bullets/tracing_bullet.tscn
-res://source/bullets/tracing_bullet.gd
-res://source/bullets/basic_bullet.gd
-res://source/test_enemy.gd
-res://source/Conductor/conductor.gd
