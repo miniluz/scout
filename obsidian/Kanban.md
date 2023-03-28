@@ -26,6 +26,7 @@ kanban-plugin: basic
 
 - [ ] Enemy Mothership Model #Graphics #Enemy
 - [ ] [[Screen-Space Triangle Shader]] #Graphics
+- [ ] Attack Pattern System Race Condition #Mechanics #Enemy
 
 
 ## DONE

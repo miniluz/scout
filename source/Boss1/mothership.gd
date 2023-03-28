@@ -28,12 +28,12 @@ func set_subbeat(subbeat: int) -> void:
 func at_subbeat() -> void:
 	var beat = current_pattern.current / current_pattern.subdivision
 	var new_subbeat = current_pattern.current + 1
-	if new_subbeat < (beat + 1) * current_pattern.subdivision:
+	if new_subbeat < (beat + 1) * current_pattern.subdivision: # Don't advance beyond the current beat for syncying
 		set_subbeat(new_subbeat)
 
 func at_beat(_beat) -> void:
 	print("Current subdiv: ", current_pattern.subdivision)
-	var beat = current_pattern.current / current_pattern.subdivision
+	var beat = current_pattern.current / current_pattern.subdivision # Advance to the next beat
 	var new_subbeat = (beat + 1) * current_pattern.subdivision
 	if new_subbeat == current_pattern.length * current_pattern.subdivision:
 		current_pattern = ALTERNATING_PATTERN()
