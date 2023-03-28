@@ -1,3 +1,5 @@
+class_name Conductor
+
 extends AudioStreamPlayer
 
 @export
@@ -9,7 +11,7 @@ var sec_per_beat = 60.0 / bpm
 
 var song_position = 0.0
 var song_position_in_beats = 0
-var last_reported_beat = 0
+var last_reported_beat = -1
 var measure = 0
 
 signal beat_signal(song_position_in_beats)
@@ -27,6 +29,7 @@ func _physics_process(_delta):
 		_report_beat()
 
 func _report_beat():
+	print("Song position in beats: ", song_position_in_beats)
 	if last_reported_beat != song_position_in_beats:
 		measure = measure % measures + 1
 		emit_signal("beat_signal", song_position_in_beats)
@@ -35,7 +38,6 @@ func _report_beat():
 
 func start_playing():
 	play()
-	_report_beat()
 
 func closest_beat():
 	var closest = int(round(song_position / sec_per_beat))

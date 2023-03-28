@@ -1,13 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://cs5e3u7rtbcj8"]
+[gd_scene load_steps=10 format=3 uid="uid://cs5e3u7rtbcj8"]
 
 [ext_resource type="Script" path="res://source/main.gd" id="1_dpqsx"]
 [ext_resource type="PackedScene" uid="uid://bfypgwnkwufa" path="res://source/Conductor/conductor.tscn" id="2_bac53"]
 [ext_resource type="PackedScene" uid="uid://c258i6p520iqk" path="res://source/player/player.tscn" id="4_4w30c"]
 [ext_resource type="Script" path="res://source/BeatIndicator.gd" id="4_3555g"]
 [ext_resource type="AudioStream" uid="uid://blotpml0csojj" path="res://assets/test2.ogg" id="5_x8q1g"]
-[ext_resource type="Script" path="res://source/test_enemy.gd" id="6_y7j2w"]
+[ext_resource type="PackedScene" uid="uid://d1joc62i8cpgl" path="res://source/bullets/basic_bullet.tscn" id="7_5kh3a"]
 [ext_resource type="PackedScene" uid="uid://ds71nl4ukst11" path="res://source/Boss1/mothership.tscn" id="8_3r8yp"]
-[ext_resource type="PackedScene" uid="uid://h8bod7qr2mw0" path="res://source/bullets/tracing_bullet.tscn" id="9_gdnf2"]
 
 [sub_resource type="Environment" id="Environment_own5x"]
 glow_enabled = true
@@ -34,6 +33,7 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 3.04784)
 environment = SubResource("Environment_own5x")
 
 [node name="Conductor" parent="." instance=ExtResource("2_bac53")]
+unique_name_in_owner = true
 stream = ExtResource("5_x8q1g")
 bpm = 75
 
@@ -51,21 +51,8 @@ script = ExtResource("4_3555g")
 wait_time = 0.6
 one_shot = true
 
-[node name="Enemy" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4.8)
-script = ExtResource("6_y7j2w")
-bullet_scene = ExtResource("9_gdnf2")
-enable = true
-
-[node name="Enemy2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4.8)
-script = ExtResource("6_y7j2w")
-bullet_scene = ExtResource("9_gdnf2")
-enable = true
-
 [node name="Mothership" parent="." instance=ExtResource("8_3r8yp")]
-transform = Transform3D(1, 0, 0, 0, 0.907154, 0.420798, 0, -0.420798, 0.907154, 0, 0, -5.37014)
+transform = Transform3D(1, 0, 0, 0, 0.907154, 0.420798, 0, -0.420798, 0.907154, 0.0171204, -2.38419e-07, -5.36974)
+BasicBullet = ExtResource("7_5kh3a")
 
 [connection signal="beat_signal" from="Conductor" to="BeatIndicator" method="_on_conductor_beat_signal"]
-[connection signal="beat_signal" from="Conductor" to="Enemy" method="_on_conductor_beat_signal"]
-[connection signal="beat_signal" from="Conductor" to="Enemy2" method="_on_conductor_beat_signal"]

@@ -5,7 +5,7 @@ var speed: float
 const MAX_DISTANCE: float = 20 **2
 
 # Called when the node enters the scene tree for the first time.
-func initialize(spawn_position: Vector3, bullet_direction: Vector3, const_speed: float) -> void:
+func init(spawn_position: Vector3, bullet_direction: Vector3, const_speed: float) -> void:
 	position = spawn_position
 	direction = bullet_direction
 	speed = const_speed

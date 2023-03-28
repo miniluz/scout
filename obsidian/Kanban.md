@@ -20,7 +20,6 @@ kanban-plugin: basic
 - [ ] Hurt #Mechanics #Player
 - [ ] Wave laser #Mechanics #Graphics #Enemy
 - [ ] Straight laser #Mechanics #Graphics #Enemy
-- [ ] Attack Pattern System #Mechanics #Enemy
 
 
 ## IN-PROGRESS (5)
@@ -38,6 +37,7 @@ kanban-plugin: basic
 - [ ] Tracing Bullet #Mechanics #Graphics #Enemy
 - [ ] ETG Roll #Mechanics #Player
 - [ ] Furi Roll #Mechanics #Player
+- [ ] Attack Pattern System #Mechanics #Enemy
 
 
 ## BLOCKED
