@@ -26,7 +26,6 @@ kanban-plugin: basic
 
 - [ ] Enemy Mothership Model #Graphics #Enemy
 - [ ] [[Screen-Space Triangle Shader]] #Graphics
-- [ ] Attack Pattern System Race Condition #Mechanics #Enemy
 
 
 ## DONE
@@ -39,6 +38,7 @@ kanban-plugin: basic
 - [ ] ETG Roll #Mechanics #Player
 - [ ] Furi Roll #Mechanics #Player
 - [ ] Attack Pattern System #Mechanics #Enemy
+- [ ] Attack Pattern System Race Condition #Mechanics #Enemy
 
 
 ## BLOCKED

@@ -29,8 +29,8 @@ func _physics_process(_delta):
 		_report_beat()
 
 func _report_beat():
-	print("Song position in beats: ", song_position_in_beats)
-	if last_reported_beat != song_position_in_beats:
+	if last_reported_beat != song_position_in_beats and song_position_in_beats >= 0:
+		print("Beat ", song_position_in_beats)
 		measure = measure % measures + 1
 		emit_signal("beat_signal", song_position_in_beats)
 		emit_signal("measure_signal", measure)

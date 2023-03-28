@@ -20,4 +20,4 @@ surface_material_override/0 = ExtResource("2_k2h8l")
 surface_material_override/0 = ExtResource("2_k2h8l")
 
 [node name="AttackTimer" type="Timer" parent="." index="4"]
-one_shot = true
+process_callback = 0
