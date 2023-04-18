@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9e784a2b67033463",
+        "id": "e07a1ba1be5bdcc2",
         "type": "tabs",
         "children": [
           {
-            "id": "456a4448bda78774",
+            "id": "28cb9eb73aff72db",
             "type": "leaf",
             "state": {
               "type": "kanban",
@@ -144,11 +144,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "456a4448bda78774",
+  "active": "28cb9eb73aff72db",
   "lastOpenFiles": [
+    "Untitled.canvas",
     "Screen-Space Triangle Shader.md",
     "Kanban.md",
-    "Untitled.canvas",
     "Screen-Space Triangle Shader #Graphics.md",
     "Untitled.md",
     "Kanban"

@@ -23,6 +23,9 @@ func initialize(spawn_position: Vector3, target_object: Node3D, initial_velocity
 	angular_speed = rotation_speed
 	target = target_object
 
+	print("Got here!")
+	
+	get_node("%Conductor")
 	get_node("%Conductor").beat_signal.connect(start_chase)
 
 func start_chase(_song) -> void:

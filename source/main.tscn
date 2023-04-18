@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://cs5e3u7rtbcj8"]
+[gd_scene load_steps=11 format=3 uid="uid://cs5e3u7rtbcj8"]
 
 [ext_resource type="Script" path="res://source/main.gd" id="1_dpqsx"]
 [ext_resource type="PackedScene" uid="uid://bfypgwnkwufa" path="res://source/Conductor/conductor.tscn" id="2_bac53"]
 [ext_resource type="PackedScene" uid="uid://c258i6p520iqk" path="res://source/player/player.tscn" id="4_4w30c"]
 [ext_resource type="Script" path="res://source/BeatIndicator.gd" id="4_3555g"]
 [ext_resource type="AudioStream" uid="uid://blotpml0csojj" path="res://assets/test2.ogg" id="5_x8q1g"]
-[ext_resource type="PackedScene" uid="uid://d1joc62i8cpgl" path="res://source/bullets/basic_bullet.tscn" id="7_5kh3a"]
+[ext_resource type="Script" path="res://source/test_enemy.gd" id="7_3c8f4"]
 [ext_resource type="PackedScene" uid="uid://ds71nl4ukst11" path="res://source/Boss1/mothership.tscn" id="8_3r8yp"]
+[ext_resource type="PackedScene" uid="uid://cnkcushqqlxvp" path="res://source/bullets/laser.tscn" id="8_qejhw"]
 
 [sub_resource type="Environment" id="Environment_own5x"]
 glow_enabled = true
@@ -27,6 +28,7 @@ fov = 30.0
 size = 20.0
 
 [node name="Player" parent="." instance=ExtResource("4_4w30c")]
+unique_name_in_owner = true
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 3.04784)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -53,6 +55,8 @@ one_shot = true
 
 [node name="Mothership" parent="." instance=ExtResource("8_3r8yp")]
 transform = Transform3D(1, 0, 0, 0, 0.907154, 0.420798, 0, -0.420798, 0.907154, 0.0171204, -2.38419e-07, -5.36974)
-BasicBullet = ExtResource("7_5kh3a")
+script = ExtResource("7_3c8f4")
+bullet_scene = ExtResource("8_qejhw")
+enable = true
 
 [connection signal="beat_signal" from="Conductor" to="BeatIndicator" method="_on_conductor_beat_signal"]

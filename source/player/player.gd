@@ -1,5 +1,7 @@
 extends Node3D
 
+class_name Player
+
 var ParryHitbox: Area3D
 var ParryVisualizer: MeshInstance3D
 var Hurtbox: Area3D

@@ -9,6 +9,7 @@ func init(spawn_position: Vector3, bullet_direction: Vector3, const_speed: float
 	position = spawn_position
 	direction = bullet_direction
 	speed = const_speed
+	translate(direction * speed * 0.05)
 
 func _physics_process(delta: float):
 	translate(direction * speed * delta)

@@ -1,7 +1,8 @@
+MeshInstance3D
+CSGCylinder3D
 Timer
 Node
 Area3D
-MeshInstance3D
 Node3D
 CollisionShape3D
 CollisionPolygon3D

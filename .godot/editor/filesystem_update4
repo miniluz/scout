@@ -1,5 +1,6 @@
-res://source/Boss1/mothership.gd
-res://source/Boss1/pattern.gd
+res://source/bullets/laser.gd
+res://source/bullets/laser.tscn
+res://source/test_enemy.gd
 res://source/main.tscn
 res://source/player/player.tscn
 res://source/bullets/basic_bullet.tscn
