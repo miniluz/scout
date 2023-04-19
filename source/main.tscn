@@ -37,6 +37,7 @@ environment = SubResource("Environment_own5x")
 [node name="Conductor" parent="." instance=ExtResource("2_bac53")]
 unique_name_in_owner = true
 stream = ExtResource("5_x8q1g")
+volume_db = -80.0
 bpm = 75
 
 [node name="BeatIndicator" type="Label" parent="."]

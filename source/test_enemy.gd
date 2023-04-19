@@ -14,6 +14,6 @@ func _on_conductor_beat_signal(_song_position_in_beats) -> void:
 
 	get_tree().current_scene.add_child(bullet)
 
-	bullet.init(position, get_node("%Player").position, 0)
+	bullet.init(position, get_node("%Player").position, 0.5)
 
 	queue_free()
