@@ -1,7 +1,0 @@
-res://source/test_enemy.gd
-res://source/bullets/laser.gd
-res://source/main.tscn
-res://source/player/player.tscn
-res://source/bullets/basic_bullet.tscn
-res://source/bullets/tracing_bullet.tscn
-res://source/bullets/laser.tscn
