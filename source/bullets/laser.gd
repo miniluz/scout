@@ -41,16 +41,16 @@ func init(spawn_position: Vector3, target_position: Vector3, radius: float) -> v
 
 func _physics_process(_delta):
   if state == State.WAIT:
-    look_at(get_parent().get_node("Player").position)
+	look_at(get_parent().get_node("Player").position)
 
 func fire(_song) -> void:
   if state != State.FIRE:
-    state = State.FIRE
+	state = State.FIRE
   Conductor.beat_signal.disconnect(fire)
   Conductor.beat_signal.connect(stop_firing)
 
   if tween:
-    tween.kill()
+	tween.kill()
 
   LaserMesh.top_radius = final_radius
   LaserMesh.bottom_radius = final_radius
